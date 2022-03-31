@@ -50,17 +50,18 @@ int main(void)
     // Disable the Global Interrupts
     // INTERRUPT_GlobalInterruptDisable();
 
-    //array to store the unique identifier
+    // array to store the unique identifier
     uint16_t MUI[10];
+
+    for (uint8_t i = 0; i <= 8; i++)
+    {
+        MUI[i] = FLASH_ReadWord(DIA_MUI + (i * 2)); // Read from memory and store in array
+        printf("\r\n MUI%d = 0x%x", i, MUI[i]);     // Print the unique identifier
+    }
 
     while (1)
     {
-
-        for (uint8_t i = 0; i <= 8; i++)
-        {
-            MUI[i] = FLASH_ReadWord(DIA_MUI + (i * 2)); // Read from memory and store in array
-            printf("\r\n MUI%d = 0x%x", i, MUI[i]); // Print the unique identifier
-        }
-        LED_Toggle();
+        __delay_ms(30);
+        LED_Toggle(); // Heartbeat LED
     }
 }
