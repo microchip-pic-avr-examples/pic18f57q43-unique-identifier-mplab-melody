@@ -2,28 +2,22 @@
 
 [![MCHP](images/microchip.png)](https://www.microchip.com)
 
-# Update the title for pic18f57q43-unique-identifier-mplab-melody here
+# Reading the Microchip Unique Identifier (MUI) on the PIC18-Q43 family of devices
 
-<!-- This is where the introduction to the example goes, including mentioning the peripherals used -->
+This code example uses the memory driver generated using the Melody library to read the Microchip Unique Identifier (MUI) number from the microcontroller's memory. The MUI is a unique number that is encoded during final manufacturing individually on every device. This allows for unique device tracking by the applciation manufacturer.
 
 ## Related Documentation
 
-<!-- Any information about an application note or tech brief can be linked here. Use unbreakable links!
-     In addition a link to the device family landing page and relevant peripheral pages as well:
-     - [AN3381 - Brushless DC Fan Speed Control Using Temperature Input and Tachometer Feedback](https://microchip.com/00003381/)
-     - [PIC18F-Q10 Family Product Page](https://www.microchip.com/design-centers/8-bit/pic-mcus/device-selection/pic18f-q10-product-family) -->
+  - [PIC18F-Q43 Family Product Page](https://www.microchip.com/en-us/products/microcontrollers-and-microprocessors/8-bit-mcus/pic-mcus/pic18-q43?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_MPAE_Examples&utm_content=pic18f57q43-unique-identifier-mplab-melody-github)
+  - [PIC18F57Q43 Datasheet](https://ww1.microchip.com/downloads/en/DeviceDoc/PIC18F27-47-57Q43-Data-Sheet-40002147F.pdf?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_MPAE_Examples&utm_content=pic18f57q43-unique-identifier-mplab-melody-github)
+  - [PIC18F57Q43 Curiosity Nano User Guide](https://ww1.microchip.com/downloads/en/DeviceDoc/PIC18F57Q43-Curiosity-Nano-HW-UserGuide-DS40002186B.pdf?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_MPAE_Examples&utm_content=pic18f57q43-unique-identifier-mplab-melody-github)
 
 ## Software Used
 
-<!-- All software used in this example must be listed here. Use unbreakable links!
-     - MPLAB® X IDE 5.30 or newer [(microchip.com/mplab/mplab-x-ide)](http://www.microchip.com/mplab/mplab-x-ide)
-     - MPLAB® XC8 2.10 or a newer compiler [(microchip.com/mplab/compilers)](http://www.microchip.com/mplab/compilers)
-     - MPLAB® Code Configurator (MCC) 3.95.0 or newer [(microchip.com/mplab/mplab-code-configurator)](https://www.microchip.com/mplab/mplab-code-configurator)
-     - MPLAB® Code Configurator (MCC) Device Libraries PIC10 / PIC12 / PIC16 / PIC18 MCUs [(microchip.com/mplab/mplab-code-configurator)](https://www.microchip.com/mplab/mplab-code-configurator)
-     - Microchip PIC18F-Q Series Device Support (1.4.109) or newer [(packs.download.microchip.com/)](https://packs.download.microchip.com/) -->
-
 - MPLAB® X IDE 6.0.0 or newer [(MPLAB® X IDE 6.0)](https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-x-ide?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_MPAE_Examples&utm_content=pic18f57q43-unique-identifier-mplab-melody-github)
 - MPLAB® XC8 2.35.0 or newer compiler [(MPLAB® XC8 2.35)](https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-xc-compilers?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_MPAE_Examples&utm_content=pic18f57q43-unique-identifier-mplab-melody-github)
+- MPLAB® Code Configurator (MCC) 5.1.2 or newer [(microchip.com/mplab/mplab-code-configurator)](https://www.microchip.com/mplab/mplab-code-configurator)
+- Microchip PIC18F-Q Series Device Support (1.13.211) or newer [(packs.download.microchip.com/)](https://packs.download.microchip.com/)
 
 ## Hardware Used
 
@@ -31,11 +25,32 @@
 
 ## Setup
 
-<!-- Explain how to connect hardware and set up software. Depending on complexity, step-by-step instructions and/or tables and/or images can be used -->
+The PIC18F57Q43 Curiosity Nano Development Board is used as the test platform. It has an onboard programmer/debugger that acts as an UART to USB convertor so no further hardware is needed.  
+
+The following configurations must be made for this project:
+
+| Pin | Configuration          |
+| :-: | :------------:         |
+| RF0 | UART TX PIN            |
+| RF3 | Digital Output for LED |
+
+
+## MCC Settings:
+
+This application uses the Memory and the UART driver from MCC. The following screenshots illustrate the settings from MCC.
+
+### Memory Module
+<img src="images/mcc_memory_config.png" width = "600"><br>
+
+### UART Module
+<img src="images/mcc_uart_config.png" width = "600"><br>
+<img src="images/mcc_uartplib_config.png" width = "600"><br>
+
 
 ## Operation
 
-<!-- Explain how to operate the example. Depending on complexity, step-by-step instructions and/or tables and/or images can be used -->
+When the cnano board is programmed, the 
+
 
 ## Summary
 
