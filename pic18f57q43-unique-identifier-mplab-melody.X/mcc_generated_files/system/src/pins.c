@@ -12,7 +12,7 @@
 */
 
 /*
-© [2022] Microchip Technology Inc. and its subsidiaries.
+? [2022] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -61,7 +61,7 @@ void PIN_MANAGER_Initialize(void)
     ANSELx registers
     */
     ANSELA = 0xFF;
-    ANSELB = 0xFF;
+    ANSELB = 0xEF;
     ANSELC = 0x7F;
     ANSELD = 0xFF;
     ANSELE = 0x7;
@@ -71,7 +71,7 @@ void PIN_MANAGER_Initialize(void)
     WPUx registers
     */
     WPUA = 0x0;
-    WPUB = 0x0;
+    WPUB = 0x10;
     WPUC = 0x0;
     WPUD = 0x0;
     WPUE = 0x0;

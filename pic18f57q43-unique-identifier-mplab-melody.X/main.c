@@ -56,12 +56,21 @@ int main(void)
     for (uint8_t i = 0; i <= 8; i++)
     {
         MUI[i] = FLASH_ReadWord(DIA_MUI + (i * 2)); // Read from memory and store in array
-        printf("\r\n MUI%d = 0x%x", i, MUI[i]);     // Print the unique identifier
     }
 
     while (1)
     {
-        __delay_ms(30);
-        LED_Toggle(); // Heartbeat LED
+        if (SW_GetValue() == 0) // Read the switch value
+        {
+            __delay_ms(10);
+            if (SW_GetValue() == 0) //Read the switch value again after 10ms to account for debouncing
+            {
+                LED_Toggle();   // Indicator 
+                for (uint8_t i = 0; i <= 8; i++)
+                {
+                    printf("\r\n MUI%d = 0x%x", i, MUI[i]); // Print the unique identifier
+                }
+            }
+        }
     }
 }

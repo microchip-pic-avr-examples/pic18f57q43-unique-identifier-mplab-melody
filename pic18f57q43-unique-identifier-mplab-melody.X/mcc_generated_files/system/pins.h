@@ -49,6 +49,26 @@
 #define PULL_UP_ENABLED      1
 #define PULL_UP_DISABLED     0
 
+// get/set RB4 aliases
+#define SW_TRIS                 TRISBbits.TRISB4
+#define SW_LAT                  LATBbits.LATB4
+#define SW_PORT                 PORTBbits.RB4
+#define SW_WPU                  WPUBbits.WPUB4
+#define SW_OD                   ODCONBbits.ODCB4
+#define SW_ANS                  ANSELBbits.ANSELB4
+#define SW_SetHigh()            do { LATBbits.LATB4 = 1; } while(0)
+#define SW_SetLow()             do { LATBbits.LATB4 = 0; } while(0)
+#define SW_Toggle()             do { LATBbits.LATB4 = ~LATBbits.LATB4; } while(0)
+#define SW_GetValue()           PORTBbits.RB4
+#define SW_SetDigitalInput()    do { TRISBbits.TRISB4 = 1; } while(0)
+#define SW_SetDigitalOutput()   do { TRISBbits.TRISB4 = 0; } while(0)
+#define SW_SetPullup()          do { WPUBbits.WPUB4 = 1; } while(0)
+#define SW_ResetPullup()        do { WPUBbits.WPUB4 = 0; } while(0)
+#define SW_SetPushPull()        do { ODCONBbits.ODCB4 = 0; } while(0)
+#define SW_SetOpenDrain()       do { ODCONBbits.ODCB4 = 1; } while(0)
+#define SW_SetAnalogMode()      do { ANSELBbits.ANSELB4 = 1; } while(0)
+#define SW_SetDigitalMode()     do { ANSELBbits.ANSELB4 = 0; } while(0)
+
 // get/set RC7 aliases
 #define IO_RC7_TRIS                 TRISCbits.TRISC7
 #define IO_RC7_LAT                  LATCbits.LATC7
