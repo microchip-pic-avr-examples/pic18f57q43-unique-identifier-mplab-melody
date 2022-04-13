@@ -23,7 +23,7 @@ This code example uses the memory driver generated using the Melody library to r
 
 ## Setup
 
-The PIC18F57Q43 Curiosity Nano Development Board is used as the test platform. It has an onboard programmer/debugger that acts as an UART to USB convertor so no further hardware is needed.  
+The PIC18F57Q43 Curiosity Nano Development Board is used as the test platform. This board has an onboard programmer/debugger and is equipped with a virtual serial port.
 
 The following configurations must be made for this project:
 
@@ -48,7 +48,7 @@ This application uses the Memory and the UART driver from MCC. The following scr
 
 ## Operation
 
-When the cnano board is programmed, the firmware reads the MUI and stores it in an array. Every time the push button (SW0) is pressed, the MUI is printed on the UART which can be observed on the Data Visualizer. The LED state toggles every time the push button is pressed for visual confirmation.
+When the curiosity nano board is programmed, the firmware reads the MUI and stores it in an array. Every time the push button (SW0) is pressed, the MUI is printed on the UART which can be observed on the Data Visualizer. The LED state toggles every time the push button is pressed for visual confirmation.
 
 <img src="images/data_visualizer.png" width = "800"><br>
 

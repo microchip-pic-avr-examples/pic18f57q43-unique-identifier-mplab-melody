@@ -31,6 +31,7 @@
     THIS SOFTWARE.
 */
 #include "mcc_generated_files/system/system.h"
+#define clrscr() printf("\e[1;1H\e[2J")  //Clear screen
 
 /*
     Main application
@@ -62,10 +63,11 @@ int main(void)
     {
         if (SW_GetValue() == 0) // Read the switch value
         {
-            __delay_ms(10);
-            if (SW_GetValue() == 0) //Read the switch value again after 10ms to account for debouncing
+            __delay_ms(20);
+            if (SW_GetValue() == 0) //Read the switch value again after 20ms to account for debouncing
             {
                 LED_Toggle();   // Indicator 
+                clrscr();
                 for (uint8_t i = 0; i <= 8; i++)
                 {
                     printf("\r\n MUI%d = 0x%x", i, MUI[i]); // Print the unique identifier
