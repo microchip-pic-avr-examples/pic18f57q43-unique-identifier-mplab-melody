@@ -4,8 +4,8 @@
     "content": {
         "metaDataVersion": "1.3.0",
         "name": "com.microchip.mcu8.mplabx.project.pic18f57q43-unique-identifier-mplab-melody",
-        "version": " ",
-        "displayName": "",
+        "version": "1.0.0",
+        "displayName": "Microchip Unique Identifier (MUI) on the PIC18-Q43 family of devices",
         "projectName": "pic18f57q43-unique-identifier-mplab-melody",
         "shortDescription": "This code example showcases how to read the Device Information Area DIA space in memory to access the Microchip Unique Identifier MUI The MUI is unique to every individual device",
         "ide": {
@@ -19,12 +19,12 @@
             }
         ],
         "dfp": {
-            "name": "",
-            "semverRange": ""
+            "name": "PIC18F-Q_DFP",
+            "semverRange": "^1.13.211"
         },
         "configurator": {
-            "name": "",
-            "semverRange": ""
+            "name": "MCC",
+            "semverRange": ">=5.1.0"
         },
         "device": {
             "metaDataVersion": "1.0.0",
@@ -37,8 +37,8 @@
             }
         },
         "author": "Ashish Makthal",
-        "peripherals": [],
-        "keywords": [],
+        "peripherals": ["Memory", "UART"],
+        "keywords": ["MCC", "Curiosity Nano"],
         "additionalData": {
             "longDescription": {
                 "metaDataVersion": "1.0.0",
