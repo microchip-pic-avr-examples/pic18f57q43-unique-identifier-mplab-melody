@@ -1,10 +1,8 @@
-<!-- Please do not change this logo with link -->
-
 [![MCHP](images/microchip.png)](https://www.microchip.com)
 
 # Reading the Microchip Unique Identifier (MUI) on the PIC18-Q43 family of devices
 
-This code example uses the memory driver generated using the Melody library to read the Microchip Unique Identifier (MUI) number from the microcontroller's memory. The MUI is a unique number that is encoded during final manufacturing individually on every device. This allows for unique device tracking by the applciation manufacturer.
+This code example uses the memory driver generated using the Melody library to read the Microchip Unique Identifier (MUI) number from the microcontroller's memory. The MUI is a unique number that is encoded during final manufacturing individually on every device. This allows for unique device tracking by the application manufacturer.
 
 ## Related Documentation
 
@@ -29,10 +27,11 @@ The PIC18F57Q43 Curiosity Nano Development Board is used as the test platform. I
 
 The following configurations must be made for this project:
 
-| Pin | Configuration          |
-| :-: | :------------:         |
-| RF0 | UART TX PIN            |
-| RF3 | Digital Output for LED |
+| Pin | Configuration            |
+| :-: | :------------:           |
+| RF0 | UART TX PIN              |
+| RF3 | Digital Output for LED   |
+| RB4 | Digital Input for Switch |
 
 
 ## MCC Settings:
@@ -49,9 +48,11 @@ This application uses the Memory and the UART driver from MCC. The following scr
 
 ## Operation
 
-When the cnano board is programmed, the 
+When the cnano board is programmed, the firmware reads the MUI and stores it in an array. Every time the push button (SW0) is pressed, the MUI is printed on the UART which can be observed on the Data Visualizer. The LED state toggles every time the push button is pressed for visual confirmation.
+
+<img src="images/data_visualizer.png" width = "800"><br>
 
 
 ## Summary
 
-<!-- Summarize what the example has shown -->
+This project demonstrates how to read the Microchip Unique Identifier (MUI) from the device's memory and display it using the UART module and the Data Visualizer. The MUI is helpful with uniquely identifying the device in a given application.
