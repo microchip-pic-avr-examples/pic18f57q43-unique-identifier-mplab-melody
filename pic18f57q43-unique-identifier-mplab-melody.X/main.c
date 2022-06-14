@@ -68,7 +68,7 @@ int main(void)
             {
                 LED_Toggle();   // Indicator 
                 clrscr();
-                for (uint8_t i = 0; i <= 8; i++)
+                for (uint8_t i = 0; i <= 4; i++)
                 {
                     printf("\r\n MUI%d = 0x%x", i, MUI[i]); // Print the unique identifier
                 }
