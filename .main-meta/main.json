@@ -4,7 +4,7 @@
     "content": {
         "metaDataVersion": "1.3.0",
         "name": "com.microchip.mcu8.mplabx.project.pic18f57q43-unique-identifier-mplab-melody",
-        "version": "1.0.0",
+        "version": "1.0.1",
         "displayName": "Microchip Unique Identifier (MUI) on the PIC18-Q43 family of devices",
         "projectName": "pic18f57q43-unique-identifier-mplab-melody",
         "shortDescription": "This code example showcases how to read the Device Information Area DIA space in memory to access the Microchip Unique Identifier MUI The MUI is unique to every individual device",
