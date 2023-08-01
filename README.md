@@ -15,7 +15,7 @@ This code example uses the memory driver generated with the MPLAB® Code Configu
 - [MPLAB® X IDE 6.10.0](https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-x-ide?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_MPAE_Examples&utm_content=pic18f57q43-unique-identifier-mplab-melody-github) or newer
 - [MPLAB® XC8 2.41](https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-xc-compilers?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_MPAE_Examples&utm_content=pic18f57q43-unique-identifier-mplab-melody-github) or newer compiler
 - [Microchip PIC18F-Q Series Device Support (1.13.211)](https://packs.download.microchip.com/) or newer
-- [MPLAB® Code Configurator (MCC) 6.3.7](https://www.microchip.com/mplab/mplab-code-configurator) or newer
+- [MPLAB® Code Configurator (MCC) 5.3.7](https://www.microchip.com/mplab/mplab-code-configurator) or newer
 - [MCC Melody Core 5.5.7](https://www.microchip.com/en-us/tools-resources/configure/mplab-code-configurator/melody?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_MPAE_Examples&utm_content=pic18f57q43-unique-identifier-mplab-melody-github) or newer
 
 ## Hardware Used
